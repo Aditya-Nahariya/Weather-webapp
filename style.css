@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056cc;
+}
+
+.weather-box img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.weather-table {
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+}
+
+.weather-table td {
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+/* Mobile responsiveness fix */
+@media (max-width: 500px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  #cityInput,
+  button {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  #cityInput {
+    border: 1px solid #ccc;
+    border-bottom: none;
+  }
+
+  button {
+    margin-top: 5px;
+  }
+}
